@@ -1,0 +1,22 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+PUT localhost:8080/product/v2/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "description": "product-1",
+  "price": 260.02
+}
+###
+
+GET localhost:8080/product/v2/1
+Content-Type: application/json
+
+###
+DELETE localhost:8080/product/v2/1
+Content-Type: application/json

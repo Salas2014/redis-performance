@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres
+    container_name: postgres_db
+    environment:
+      - POSTGRES_DB=redis_performance_db
+      - POSTGRES_USER=salas
+      - POSTGRES_PASSWORD=salas
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    ports:
+      - 9000:80
+  redis:
+    container_name: redis-2
+    hostname: redis
+    image: redis:6.2
+    ports:
+        - 6379:6379
