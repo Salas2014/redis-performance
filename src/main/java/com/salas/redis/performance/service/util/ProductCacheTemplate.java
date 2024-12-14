@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 import javax.crypto.Mac;
 
-@Service
+//@Service
 public class ProductCacheTemplate extends CacheTemplate<Integer, Product> {
 
     @Autowired

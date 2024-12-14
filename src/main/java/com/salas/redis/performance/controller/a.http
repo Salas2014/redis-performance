@@ -18,5 +18,20 @@ GET localhost:8080/product/v2/1
 Content-Type: application/json
 
 ###
+
+GET localhost:7070/product/v2/1
+Content-Type: application/json
+
+###
+PUT localhost:8080/product/v2/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "description": "product-1",
+  "price": 155.82
+}
+
+###
 DELETE localhost:8080/product/v2/1
 Content-Type: application/json
